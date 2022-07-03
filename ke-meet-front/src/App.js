@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import Routers from "./Routers";
+import Modal from "react-modal";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -21,6 +22,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -51,8 +53,19 @@ table {
 }
 body {
   font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+html,
+body{
+width:100%;
+overflow-x:hidden;
 }
 `;
+
+Modal.setAppElement("#root");
 
 function App() {
   return (
